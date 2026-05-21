@@ -1,5 +1,5 @@
 <script>
-    import "beercss/dist/cdn/beer.min.css";
+    // import "beercss/dist/cdn/beer.min.css";
     import "beercss";
     import "material-dynamic-colors";
     import "$lib/assets/theme.css";
