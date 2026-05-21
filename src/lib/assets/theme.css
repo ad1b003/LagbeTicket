@@ -1,0 +1,311 @@
+:root,
+body.light {
+    --primary: #000000;
+    --on-primary: #ffffff;
+    --primary-container: #f5f5f5;
+    --on-primary-container: #000000;
+
+    --secondary: #1a1a1a;
+    --on-secondary: #ffffff;
+    --secondary-container: #f2f2f2;
+    --on-secondary-container: #000000;
+
+    --tertiary: #2a2a2a;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #f7f7f7;
+    --on-tertiary-container: #000000;
+
+    --error: #000000;
+    --on-error: #ffffff;
+    --error-container: #f2f2f2;
+    --on-error-container: #000000;
+
+    --background: #ffffff;
+    --on-background: #000000;
+
+    --surface: rgba(255, 255, 255, 0.6);
+    --on-surface: #000000;
+
+    --surface-variant: rgba(0, 0, 0, 0.04);
+    --on-surface-variant: #2a2a2a;
+
+    --outline: rgba(0, 0, 0, 0.12);
+    --outline-variant: rgba(0, 0, 0, 0.08);
+
+    --shadow: #000000;
+    --scrim: #000000;
+
+    --inverse-surface: #000000;
+    --inverse-on-surface: #ffffff;
+    --inverse-primary: #ffffff;
+
+    --surface-dim: #fafafa;
+    --surface-bright: #ffffff;
+    --surface-container-lowest: rgba(255, 255, 255, 0.5);
+    --surface-container-low: rgba(255, 255, 255, 0.6);
+    --surface-container: rgba(255, 255, 255, 0.7);
+    --surface-container-high: rgba(255, 255, 255, 0.8);
+    --surface-container-highest: rgba(255, 255, 255, 0.9);
+
+    --overlay: rgba(0, 0, 0, 0.05);
+    --elevate1: 0 6px 18px rgba(0, 0, 0, 0.05);
+    --elevate2: 0 12px 30px rgba(0, 0, 0, 0.08);
+    --elevate3: 0 20px 50px rgba(0, 0, 0, 0.12);
+    --size: 0.98rem;
+    --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-icon: "Material Symbols Outlined";
+    --speed1: 90ms;
+    --speed2: 140ms;
+    --speed3: 220ms;
+    --speed4: 320ms;
+}
+
+body.dark {
+    --primary: #ffffff;
+    --on-primary: #000000;
+    --primary-container: #1a1a1a;
+    --on-primary-container: #ffffff;
+
+    --secondary: #e6e6e6;
+    --on-secondary: #000000;
+    --secondary-container: #141414;
+    --on-secondary-container: #ffffff;
+
+    --tertiary: #d0d0d0;
+    --on-tertiary: #000000;
+    --tertiary-container: #101010;
+    --on-tertiary-container: #ffffff;
+
+    --error: #ffffff;
+    --on-error: #000000;
+    --error-container: #1a1a1a;
+    --on-error-container: #ffffff;
+
+    --background: #000000;
+    --on-background: #ffffff;
+
+    --surface: rgba(20, 20, 20, 0.55);
+    --on-surface: #ffffff;
+
+    --surface-variant: rgba(255, 255, 255, 0.06);
+    --on-surface-variant: #cfcfcf;
+
+    --outline: rgba(255, 255, 255, 0.16);
+    --outline-variant: rgba(255, 255, 255, 0.08);
+
+    --shadow: #000000;
+    --scrim: #000000;
+
+    --inverse-surface: #ffffff;
+    --inverse-on-surface: #000000;
+    --inverse-primary: #000000;
+
+    --surface-dim: #050505;
+    --surface-bright: #121212;
+    --surface-container-lowest: rgba(0, 0, 0, 0.5);
+    --surface-container-low: rgba(0, 0, 0, 0.6);
+    --surface-container: rgba(0, 0, 0, 0.7);
+    --surface-container-high: rgba(0, 0, 0, 0.8);
+    --surface-container-highest: rgba(0, 0, 0, 0.9);
+
+    --overlay: rgba(255, 255, 255, 0.06);
+    --elevate1: 0 6px 18px rgba(0, 0, 0, 0.28);
+    --elevate2: 0 12px 30px rgba(0, 0, 0, 0.38);
+    --elevate3: 0 20px 50px rgba(0, 0, 0, 0.5);
+    --size: 0.98rem;
+    --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-icon: "Material Symbols Outlined";
+    --speed1: 90ms;
+    --speed2: 140ms;
+    --speed3: 220ms;
+    --speed4: 320ms;
+}
+
+/* Glass + Minimal Polish */
+
+body {
+    background: linear-gradient(180deg,
+            var(--background),
+            color-mix(in srgb, var(--background) 92%, #888888));
+    color: var(--on-background);
+    letter-spacing: -0.01em;
+}
+
+/* Glass Header */
+header.fixed.elevate {
+    background: var(--surface);
+    backdrop-filter: blur(1.25rem) saturate(140%);
+    -webkit-backdrop-filter: blur(1.25rem) saturate(140%);
+    border-bottom: 1px solid var(--outline-variant);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.06);
+}
+
+body.dark header.fixed.elevate {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+/* Glass Cards */
+article {
+    background: var(--surface-container);
+    border: 1px solid var(--outline-variant);
+    border-radius: 1.75rem;
+    backdrop-filter: blur(1rem) saturate(140%);
+    -webkit-backdrop-filter: blur(1rem) saturate(140%);
+    box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.06);
+}
+
+body.dark article {
+    box-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.35);
+}
+
+/* Buttons */
+button.btn {
+    border-radius: 1.25rem;
+    backdrop-filter: blur(10px);
+    background: var(--primary);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+body.dark button.btn {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.45);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    transition: all 140ms ease;
+}
+
+/* Subtle hover surfaces */
+button.transparent.circle:hover {
+    background: var(--surface-container-high);
+}
+
+/* Placeholder */
+::placeholder {
+    color: color-mix(in srgb, var(--on-surface-variant) 60%, transparent);
+}
+
+.chip {
+    backdrop-filter: blur(0.75rem);
+    border: 1px solid var(--outline-variant);
+    background: var(--surface-container);
+}
+
+dialog {
+    background: var(--surface-container-high);
+    backdrop-filter: blur(1.25rem);
+    border: 1px solid var(--outline-variant);
+    border-radius: 1.5rem;
+}
+
+/*
+button.extend.circle.large-elevate.fixed.bottom.right {
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--outline-variant);
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
+    z-index: 20;
+}
+
+body.dark button.extend.circle.large-elevate.fixed.bottom.right {
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+footer.row {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-top: 1px solid var(--outline-variant);
+    background: color-mix(in srgb, var(--surface) 78%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--on-surface-variant);
+    border-radius: 20px 20px 0 0;
+}
+
+footer.row a {
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+footer.row a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    button.extend.circle.large-elevate.fixed.bottom.right {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    main {
+        padding-bottom: 5rem;
+    }
+} */
+
+/* button.extend.circle.large-elevate.fixed.bottom.right {
+    z-index: 50;
+    right: calc(1rem + env(safe-area-inset-right));
+    bottom: calc(2rem + env(safe-area-inset-bottom));
+    border: 1px solid var(--outline-variant);
+    background: color-mix(in srgb, var(--primary) 78%, transparent);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: var(--elevate3);
+}
+
+button.extend.circle.large-elevate.fixed.bottom.right i,
+button.extend.circle.large-elevate.fixed.bottom.right span {
+    position: relative;
+    z-index: 1;
+} */
+
+footer.row {
+    margin-top: 0.75rem;
+    padding: 0.45rem 0.8rem calc(0.45rem + env(safe-area-inset-bottom));
+    min-height: 0;
+    gap: 0.5rem;
+    align-items: center;
+    border-top: 1px solid var(--outline-variant);
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--elevate1);
+    font-size: 0.78rem;
+    line-height: 1.2;
+}
+
+footer.row .max {
+    margin: 0;
+    opacity: 0.78;
+}
+
+footer.row a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--on-surface-variant);
+    opacity: 0.9;
+    font-size: 0.78rem;
+}
+
+footer.row a:hover {
+    opacity: 1;
+    background: var(--overlay);
+}
+/* 
+@media (max-width: 720px) {
+    main {
+        padding-bottom: 6.5rem;
+    }
+
+    footer.row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0.8rem;
+    }
+
+    footer.row .right-align {
+        align-self: flex-end;
+    }
+} */
