@@ -1,7 +1,7 @@
 <script>
     // import "beercss/dist/cdn/beer.min.css";
-    import "beercss";
-    import "material-dynamic-colors";
+    // import "beercss";
+    // import "material-dynamic-colors";
     import "$lib/assets/theme.css";
     import { onMount } from "svelte";
     import { goto } from "$app/navigation";
